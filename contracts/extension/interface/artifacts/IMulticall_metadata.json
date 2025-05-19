@@ -43,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/extension/interface/IMultiCall.sol": "IMulticall"
+			"contracts/extension/interface/IMulticall.sol": "IMulticall"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -57,7 +57,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/extension/interface/IMultiCall.sol": {
+		"contracts/extension/interface/IMulticall.sol": {
 			"keccak256": "0xdd19c720555c8271fd164d502d7161e1c6318c01bed53369e6b7200008bae924",
 			"license": "MIT",
 			"urls": [

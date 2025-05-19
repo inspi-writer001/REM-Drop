@@ -1,0 +1,54 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "The interface `IClaimConditionMultiPhase` is written for thirdweb's 'Drop' contracts, which are distribution mechanisms for tokens.  An authorized wallet can set a series of claim conditions, ordered by their respective `startTimestamp`.  A claim condition defines criteria under which accounts can mint tokens. Claim conditions can be overwritten  or added to by the contract admin. At any moment, there is only one active claim condition.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IClaimConditionMultiPhase.sol": "IClaimConditionMultiPhase"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IClaimCondition.sol": {
+			"keccak256": "0x7eb50217f513a762467f67bf65b264f8b408d98ac755ab5b34505fa55dda7714",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://fab23b3d54bd6bdafd5e43156df69d799e7f6e5fdbb2bc88f3a51c2c31586786",
+				"dweb:/ipfs/QmTMHziEAzbuv11AgVC3i3RpCtoxjHCciKL2tLBR3uQREe"
+			]
+		},
+		"contracts/extension/interface/IClaimConditionMultiPhase.sol": {
+			"keccak256": "0x292ecd48ea8e0d58e192c4ceeb617c0664f453d47c59b8311417fee3f6be6bbe",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://82c7de86e56e2d8192afddfcce24bc5af1b786c8799c0194f40e69f3a8aaa3ce",
+				"dweb:/ipfs/Qmdr1z3iCuGgvU2UEfAyi2wsYx7aaVbn128zhNQP8jSHm9"
+			]
+		}
+	},
+	"version": 1
+}
