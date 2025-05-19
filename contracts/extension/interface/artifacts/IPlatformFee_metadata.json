@@ -1,0 +1,152 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "platformFeeRecipient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "flatFee",
+						"type": "uint256"
+					}
+				],
+				"name": "FlatPlatformFeeUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "platformFeeRecipient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "platformFeeBps",
+						"type": "uint256"
+					}
+				],
+				"name": "PlatformFeeInfoUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum IPlatformFee.PlatformFeeType",
+						"name": "feeType",
+						"type": "uint8"
+					}
+				],
+				"name": "PlatformFeeTypeUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getPlatformFeeInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_platformFeeRecipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_platformFeeBps",
+						"type": "uint256"
+					}
+				],
+				"name": "setPlatformFeeInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"FlatPlatformFeeUpdated(address,uint256)": {
+					"details": "Emitted when the flat platform fee is updated."
+				},
+				"PlatformFeeInfoUpdated(address,uint256)": {
+					"details": "Emitted when fee on primary sales is updated."
+				},
+				"PlatformFeeTypeUpdated(uint8)": {
+					"details": "Emitted when the platform fee type is updated."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"getPlatformFeeInfo()": {
+					"details": "Returns the platform fee bps and recipient."
+				},
+				"setPlatformFeeInfo(address,uint256)": {
+					"details": "Lets a module admin update the fees on primary sales."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Thirdweb's `PlatformFee` is a contract extension to be used with any base contract. It exposes functions for setting and reading  the recipient of platform fee and the platform fee basis points, and lets the inheriting contract perform conditional logic  that uses information about platform fees, if desired.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IPlatformFee.sol": "IPlatformFee"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IPlatformFee.sol": {
+			"keccak256": "0x4c29aeec44ae87e94f9acf24f456f74629a753cb32e38b208e9d0e13ffa1e3ec",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://134f6685f564d1f78b43ec2e6c3607f22c0da97c8797cc09a23d00011b0469bb",
+				"dweb:/ipfs/QmNuntvC9x9ZqprY97wWq2iZnLX9sjn1YKhRS9rCcwrms5"
+			]
+		}
+	},
+	"version": 1
+}

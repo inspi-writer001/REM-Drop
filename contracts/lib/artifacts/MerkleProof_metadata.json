@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "OpenZeppelin, thirdweb",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lib/MerkleProof.sol": "MerkleProof"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lib/MerkleProof.sol": {
+			"keccak256": "0xb40798a3d44b4028f7e56220a2fabb7c91416b0dce9413821f8d62f5bb7d152b",
+			"license": "Apache 2.0",
+			"urls": [
+				"bzz-raw://1fe861d8c6b2dbe5df20aa27053a4d5e2d848937c81b1918bd5a86847d85453c",
+				"dweb:/ipfs/QmQ3LYRBh3pXynUEhxq8iaHuUCWpaoCkYJrp9Mc1dTGCgi"
+			]
+		}
+	},
+	"version": 1
+}

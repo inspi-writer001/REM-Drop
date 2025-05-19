@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "The interface `IClaimCondition` is written for thirdweb's 'Drop' contracts, which are distribution mechanisms for tokens.  A claim condition defines criteria under which accounts can mint tokens. Claim conditions can be overwritten  or added to by the contract admin. At any moment, there is only one active claim condition.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IClaimCondition.sol": "IClaimCondition"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IClaimCondition.sol": {
+			"keccak256": "0x7eb50217f513a762467f67bf65b264f8b408d98ac755ab5b34505fa55dda7714",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://fab23b3d54bd6bdafd5e43156df69d799e7f6e5fdbb2bc88f3a51c2c31586786",
+				"dweb:/ipfs/QmTMHziEAzbuv11AgVC3i3RpCtoxjHCciKL2tLBR3uQREe"
+			]
+		}
+	},
+	"version": 1
+}

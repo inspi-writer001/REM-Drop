@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Wrappers around ERC20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeERC20 for IERC20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeERC20",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"external-deps/openzeppelin/token/ERC20/utils/SafeERC20.sol": "SafeERC20"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lib/Address.sol": {
+			"keccak256": "0xe0aaf67d84fd9332c9d9f388bce6f0114b86d7d26a46d0310128218612c30ea9",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://807e845ef5b1760eca3af743e06dec9c17c42f720da74749b628dd1cbd038b4e",
+				"dweb:/ipfs/QmUVbegvYKovApUHSJqw2VjFDj4EmowsgZsVnAwoDCEdHX"
+			]
+		},
+		"external-deps/eip/interface/IERC20.sol": {
+			"keccak256": "0xa898a3085e06bd317636cd5d3725ff61593824d6d6f368925c87572d4cfb9d8f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://ccda30b8a2dba15697f3a97018e26d0e98be37a625ee111eea34b0085d2d4d79",
+				"dweb:/ipfs/QmNaUZUH8meghd5R6bcS7U8V9c3UxRko3Q4Vs29C8Yb12B"
+			]
+		},
+		"external-deps/openzeppelin/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0x3559a1442ae395875c5252e10532d5db324753d47bbf5d4e082d33a2e9fcbaa9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://51576575cac75e2bc837c02cc77f5300fd5eb790490fe4bd7356fca23f8898e0",
+				"dweb:/ipfs/QmbLKKEHmAczgZ8hjL6KiBJ9mssNwp3UDeVdWtyxZ7mJuN"
+			]
+		}
+	},
+	"version": 1
+}

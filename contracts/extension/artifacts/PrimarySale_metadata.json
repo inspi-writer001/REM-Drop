@@ -1,0 +1,147 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "PrimarySaleInvalidRecipient",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PrimarySaleUnauthorized",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "PrimarySaleRecipientUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "primarySaleRecipient",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_saleRecipient",
+						"type": "address"
+					}
+				],
+				"name": "setPrimarySaleRecipient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"PrimarySaleInvalidRecipient(address)": [
+					{
+						"details": "The recipient is invalid"
+					}
+				],
+				"PrimarySaleUnauthorized()": [
+					{
+						"details": "The sender is not authorized to perform the action"
+					}
+				]
+			},
+			"events": {
+				"PrimarySaleRecipientUpdated(address)": {
+					"details": "Emitted when a new sale recipient is set."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"primarySaleRecipient()": {
+					"details": "Returns primary sale recipient address."
+				},
+				"setPrimarySaleRecipient(address)": {
+					"details": "Caller should be authorized to set primary sales info.                  See {_canSetPrimarySaleRecipient}.                  Emits {PrimarySaleRecipientUpdated Event}; See {_setupPrimarySaleRecipient}.",
+					"params": {
+						"_saleRecipient": "Address to be set as new recipient of primary sales."
+					}
+				}
+			},
+			"stateVariables": {
+				"recipient": {
+					"details": "The address that receives all primary sales value."
+				}
+			},
+			"title": "Primary Sale",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"setPrimarySaleRecipient(address)": {
+					"notice": "Updates primary sale recipient."
+				}
+			},
+			"notice": "Thirdweb's `PrimarySale` is a contract extension to be used with any base contract. It exposes functions for setting and reading           the recipient of primary sales, and lets the inheriting contract perform conditional logic that uses information about           primary sales, if desired.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/PrimarySale.sol": "PrimarySale"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/PrimarySale.sol": {
+			"keccak256": "0x40017dcb523b3554a877e438ecc97800961fb623ed8bfc85b2033952ab4bc871",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://60697d01719f9db6994cfbf5c4a298ef51bf7b803250421aea92e1f19543435f",
+				"dweb:/ipfs/QmR43VU3jnztLMNPugGEaPyc6TwmcBRvii2hc277EMpi3Z"
+			]
+		},
+		"contracts/extension/interface/IPrimarySale.sol": {
+			"keccak256": "0xb4eced38645eb1be936fb30e449da88f31404d8812f639de2f1b58b316b019f0",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://0bb33e58739ecb3ede0482f9c87e1eb624c7b6aa66e0c3fa8c62f541cb6a297c",
+				"dweb:/ipfs/QmVduBJCtEGjB9Wk4ZyyHrx4vF7xEt2RR5YyTrCTrrZVG8"
+			]
+		}
+	},
+	"version": 1
+}

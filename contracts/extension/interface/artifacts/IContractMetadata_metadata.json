@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "prevURI",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newURI",
+						"type": "string"
+					}
+				],
+				"name": "ContractURIUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "contractURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_uri",
+						"type": "string"
+					}
+				],
+				"name": "setContractURI",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"ContractURIUpdated(string,string)": {
+					"details": "Emitted when the contract URI is updated."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"contractURI()": {
+					"details": "Returns the metadata URI of the contract."
+				},
+				"setContractURI(string)": {
+					"details": "Sets contract URI for the storefront-level metadata of the contract.       Only module admin can call this function."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Thirdweb's `ContractMetadata` is a contract extension for any base contracts. It lets you set a metadata URI  for you contract.  Additionally, `ContractMetadata` is necessary for NFT contracts that want royalties to get distributed on OpenSea.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IContractMetadata.sol": "IContractMetadata"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IContractMetadata.sol": {
+			"keccak256": "0x883b8c431052e826f99025b670fd054931805fbafa23799d0fee33050cbd8456",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://d2a465b77730737338fd015bacfb69063bd2ae2e9be498ec2047a341d412566f",
+				"dweb:/ipfs/QmaY6bHQymwqqfvDJz7AyG5wYkce4Q1yLkLB4CTbQv4Fd4"
+			]
+		}
+	},
+	"version": 1
+}

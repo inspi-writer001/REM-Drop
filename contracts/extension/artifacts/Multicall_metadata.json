@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes[]",
+						"name": "data",
+						"type": "bytes[]"
+					}
+				],
+				"name": "multicall",
+				"outputs": [
+					{
+						"internalType": "bytes[]",
+						"name": "results",
+						"type": "bytes[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Provides a function to batch together multiple calls in a single external call. _Available since v4.1._",
+			"kind": "dev",
+			"methods": {
+				"multicall(bytes[])": {
+					"details": "Receives and executes a batch of function calls on this contract.",
+					"params": {
+						"data": "The bytes data that makes up the batch of function calls to execute."
+					},
+					"returns": {
+						"results": "The bytes data that makes up the result of the batch of function calls executed."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"multicall(bytes[])": {
+					"notice": "Receives and executes a batch of function calls on this contract."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/Multicall.sol": "Multicall"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/Multicall.sol": {
+			"keccak256": "0x6ea4a3e7cafd5883c4c6bca946666b19ad52df3c58ea5c04af1bedc83da702db",
+			"license": "Apache 2.0",
+			"urls": [
+				"bzz-raw://cdaf7d789df0c6110eb49ab6599c9811a7475f66c3a9de179c9c903e6f510431",
+				"dweb:/ipfs/QmUJSjsGPsWZAKrQwPDcfYyDw4scjhvow2WJqGd1dB6z2T"
+			]
+		},
+		"contracts/extension/interface/IMulticall.sol": {
+			"keccak256": "0xdd19c720555c8271fd164d502d7161e1c6318c01bed53369e6b7200008bae924",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7fe85574ef4ffc87e74c94230617d944cb7698dec3d01590684a0379dfa2016",
+				"dweb:/ipfs/QmVsy27WL569GEAWWae7344PNKv41hWAmrBGQwkRc5R9zx"
+			]
+		},
+		"contracts/lib/Address.sol": {
+			"keccak256": "0xe0aaf67d84fd9332c9d9f388bce6f0114b86d7d26a46d0310128218612c30ea9",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://807e845ef5b1760eca3af743e06dec9c17c42f720da74749b628dd1cbd038b4e",
+				"dweb:/ipfs/QmUVbegvYKovApUHSJqw2VjFDj4EmowsgZsVnAwoDCEdHX"
+			]
+		}
+	},
+	"version": 1
+}

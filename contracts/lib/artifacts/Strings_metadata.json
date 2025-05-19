@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "String operations.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lib/Strings.sol": "Strings"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lib/Strings.sol": {
+			"keccak256": "0x03edbfd4e45d8309771d13b70e4eb4d50dbc9571bc99fbe82d3fa2d6aaa4fb12",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://295d31e0d10dc57bb3fe1b07d54bfc247c00d90ed47cc1891ef527fbb51f8cbf",
+				"dweb:/ipfs/QmcBrCAWovajpocHmLTB4FAZAb5MAGA5anHBNk39Vdew5i"
+			]
+		}
+	},
+	"version": 1
+}

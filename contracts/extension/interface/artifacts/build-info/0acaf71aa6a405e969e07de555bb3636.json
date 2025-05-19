@@ -1,0 +1,685 @@
+{
+	"id": "0acaf71aa6a405e969e07de555bb3636",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/extension/interface/IPlatformFee.sol": {
+				"content": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\n/// @author thirdweb\n\n/**\n *  Thirdweb's `PlatformFee` is a contract extension to be used with any base contract. It exposes functions for setting and reading\n *  the recipient of platform fee and the platform fee basis points, and lets the inheriting contract perform conditional logic\n *  that uses information about platform fees, if desired.\n */\n\ninterface IPlatformFee {\n    /// @dev Fee type variants: percentage fee and flat fee\n    enum PlatformFeeType {\n        Bps,\n        Flat\n    }\n\n    /// @dev Returns the platform fee bps and recipient.\n    function getPlatformFeeInfo() external view returns (address, uint16);\n\n    /// @dev Lets a module admin update the fees on primary sales.\n    function setPlatformFeeInfo(address _platformFeeRecipient, uint256 _platformFeeBps) external;\n\n    /// @dev Emitted when fee on primary sales is updated.\n    event PlatformFeeInfoUpdated(address indexed platformFeeRecipient, uint256 platformFeeBps);\n\n    /// @dev Emitted when the flat platform fee is updated.\n    event FlatPlatformFeeUpdated(address platformFeeRecipient, uint256 flatFee);\n\n    /// @dev Emitted when the platform fee type is updated.\n    event PlatformFeeTypeUpdated(PlatformFeeType feeType);\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/extension/interface/IPlatformFee.sol": {
+				"IPlatformFee": {
+					"abi": [
+						{
+							"anonymous": false,
+							"inputs": [
+								{
+									"indexed": false,
+									"internalType": "address",
+									"name": "platformFeeRecipient",
+									"type": "address"
+								},
+								{
+									"indexed": false,
+									"internalType": "uint256",
+									"name": "flatFee",
+									"type": "uint256"
+								}
+							],
+							"name": "FlatPlatformFeeUpdated",
+							"type": "event"
+						},
+						{
+							"anonymous": false,
+							"inputs": [
+								{
+									"indexed": true,
+									"internalType": "address",
+									"name": "platformFeeRecipient",
+									"type": "address"
+								},
+								{
+									"indexed": false,
+									"internalType": "uint256",
+									"name": "platformFeeBps",
+									"type": "uint256"
+								}
+							],
+							"name": "PlatformFeeInfoUpdated",
+							"type": "event"
+						},
+						{
+							"anonymous": false,
+							"inputs": [
+								{
+									"indexed": false,
+									"internalType": "enum IPlatformFee.PlatformFeeType",
+									"name": "feeType",
+									"type": "uint8"
+								}
+							],
+							"name": "PlatformFeeTypeUpdated",
+							"type": "event"
+						},
+						{
+							"inputs": [],
+							"name": "getPlatformFeeInfo",
+							"outputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								},
+								{
+									"internalType": "uint16",
+									"name": "",
+									"type": "uint16"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_platformFeeRecipient",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_platformFeeBps",
+									"type": "uint256"
+								}
+							],
+							"name": "setPlatformFeeInfo",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"events": {
+							"FlatPlatformFeeUpdated(address,uint256)": {
+								"details": "Emitted when the flat platform fee is updated."
+							},
+							"PlatformFeeInfoUpdated(address,uint256)": {
+								"details": "Emitted when fee on primary sales is updated."
+							},
+							"PlatformFeeTypeUpdated(uint8)": {
+								"details": "Emitted when the platform fee type is updated."
+							}
+						},
+						"kind": "dev",
+						"methods": {
+							"getPlatformFeeInfo()": {
+								"details": "Returns the platform fee bps and recipient."
+							},
+							"setPlatformFeeInfo(address,uint256)": {
+								"details": "Lets a module admin update the fees on primary sales."
+							}
+						},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"getPlatformFeeInfo()": "d45573f6",
+							"setPlatformFeeInfo(address,uint256)": "1e7ac488"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"platformFeeRecipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"flatFee\",\"type\":\"uint256\"}],\"name\":\"FlatPlatformFeeUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"platformFeeRecipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"platformFeeBps\",\"type\":\"uint256\"}],\"name\":\"PlatformFeeInfoUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"enum IPlatformFee.PlatformFeeType\",\"name\":\"feeType\",\"type\":\"uint8\"}],\"name\":\"PlatformFeeTypeUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getPlatformFeeInfo\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_platformFeeRecipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_platformFeeBps\",\"type\":\"uint256\"}],\"name\":\"setPlatformFeeInfo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"FlatPlatformFeeUpdated(address,uint256)\":{\"details\":\"Emitted when the flat platform fee is updated.\"},\"PlatformFeeInfoUpdated(address,uint256)\":{\"details\":\"Emitted when fee on primary sales is updated.\"},\"PlatformFeeTypeUpdated(uint8)\":{\"details\":\"Emitted when the platform fee type is updated.\"}},\"kind\":\"dev\",\"methods\":{\"getPlatformFeeInfo()\":{\"details\":\"Returns the platform fee bps and recipient.\"},\"setPlatformFeeInfo(address,uint256)\":{\"details\":\"Lets a module admin update the fees on primary sales.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Thirdweb's `PlatformFee` is a contract extension to be used with any base contract. It exposes functions for setting and reading  the recipient of platform fee and the platform fee basis points, and lets the inheriting contract perform conditional logic  that uses information about platform fees, if desired.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/extension/interface/IPlatformFee.sol\":\"IPlatformFee\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/extension/interface/IPlatformFee.sol\":{\"keccak256\":\"0x4c29aeec44ae87e94f9acf24f456f74629a753cb32e38b208e9d0e13ffa1e3ec\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://134f6685f564d1f78b43ec2e6c3607f22c0da97c8797cc09a23d00011b0469bb\",\"dweb:/ipfs/QmNuntvC9x9ZqprY97wWq2iZnLX9sjn1YKhRS9rCcwrms5\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"notice": "Thirdweb's `PlatformFee` is a contract extension to be used with any base contract. It exposes functions for setting and reading  the recipient of platform fee and the platform fee basis points, and lets the inheriting contract perform conditional logic  that uses information about platform fees, if desired.",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/extension/interface/IPlatformFee.sol": {
+				"ast": {
+					"absolutePath": "contracts/extension/interface/IPlatformFee.sol",
+					"exportedSymbols": {
+						"IPlatformFee": [
+							43
+						]
+					},
+					"id": 44,
+					"license": "Apache-2.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IPlatformFee",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "86:327:0",
+								"text": "  Thirdweb's `PlatformFee` is a contract extension to be used with any base contract. It exposes functions for setting and reading\n  the recipient of platform fee and the platform fee basis points, and lets the inheriting contract perform conditional logic\n  that uses information about platform fees, if desired."
+							},
+							"fullyImplemented": false,
+							"id": 43,
+							"linearizedBaseContracts": [
+								43
+							],
+							"name": "IPlatformFee",
+							"nameLocation": "425:12:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "IPlatformFee.PlatformFeeType",
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "444:55:0",
+										"text": "@dev Fee type variants: percentage fee and flat fee"
+									},
+									"id": 6,
+									"members": [
+										{
+											"id": 4,
+											"name": "Bps",
+											"nameLocation": "535:3:0",
+											"nodeType": "EnumValue",
+											"src": "535:3:0"
+										},
+										{
+											"id": 5,
+											"name": "Flat",
+											"nameLocation": "548:4:0",
+											"nodeType": "EnumValue",
+											"src": "548:4:0"
+										}
+									],
+									"name": "PlatformFeeType",
+									"nameLocation": "509:15:0",
+									"nodeType": "EnumDefinition",
+									"src": "504:54:0"
+								},
+								{
+									"documentation": {
+										"id": 7,
+										"nodeType": "StructuredDocumentation",
+										"src": "564:52:0",
+										"text": "@dev Returns the platform fee bps and recipient."
+									},
+									"functionSelector": "d45573f6",
+									"id": 14,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "getPlatformFeeInfo",
+									"nameLocation": "630:18:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "648:2:0"
+									},
+									"returnParameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "674:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "674:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "683:6:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint16",
+													"typeString": "uint16"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "uint16",
+													"nodeType": "ElementaryTypeName",
+													"src": "683:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint16",
+														"typeString": "uint16"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "673:17:0"
+									},
+									"scope": 43,
+									"src": "621:70:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 15,
+										"nodeType": "StructuredDocumentation",
+										"src": "697:62:0",
+										"text": "@dev Lets a module admin update the fees on primary sales."
+									},
+									"functionSelector": "1e7ac488",
+									"id": 22,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "setPlatformFeeInfo",
+									"nameLocation": "773:18:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 17,
+												"mutability": "mutable",
+												"name": "_platformFeeRecipient",
+												"nameLocation": "800:21:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 22,
+												"src": "792:29:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 16,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "792:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "_platformFeeBps",
+												"nameLocation": "831:15:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 22,
+												"src": "823:23:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 18,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "823:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "791:56:0"
+									},
+									"returnParameters": {
+										"id": 21,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "856:0:0"
+									},
+									"scope": 43,
+									"src": "764:93:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"anonymous": false,
+									"documentation": {
+										"id": 23,
+										"nodeType": "StructuredDocumentation",
+										"src": "863:54:0",
+										"text": "@dev Emitted when fee on primary sales is updated."
+									},
+									"eventSelector": "e2497bd806ec41a6e0dd992c29a72efc0ef8fec9092d1978fd4a1e00b2f18304",
+									"id": 29,
+									"name": "PlatformFeeInfoUpdated",
+									"nameLocation": "928:22:0",
+									"nodeType": "EventDefinition",
+									"parameters": {
+										"id": 28,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 25,
+												"indexed": true,
+												"mutability": "mutable",
+												"name": "platformFeeRecipient",
+												"nameLocation": "967:20:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 29,
+												"src": "951:36:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 24,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "951:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 27,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "platformFeeBps",
+												"nameLocation": "997:14:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 29,
+												"src": "989:22:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 26,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "989:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "950:62:0"
+									},
+									"src": "922:91:0"
+								},
+								{
+									"anonymous": false,
+									"documentation": {
+										"id": 30,
+										"nodeType": "StructuredDocumentation",
+										"src": "1019:55:0",
+										"text": "@dev Emitted when the flat platform fee is updated."
+									},
+									"eventSelector": "f8086cee80709bd44c82f89dbca54115ebd05e840a88ab81df9cf5be9754eb63",
+									"id": 36,
+									"name": "FlatPlatformFeeUpdated",
+									"nameLocation": "1085:22:0",
+									"nodeType": "EventDefinition",
+									"parameters": {
+										"id": 35,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 32,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "platformFeeRecipient",
+												"nameLocation": "1116:20:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 36,
+												"src": "1108:28:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 31,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "1108:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 34,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "flatFee",
+												"nameLocation": "1146:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 36,
+												"src": "1138:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 33,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "1138:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1107:47:0"
+									},
+									"src": "1079:76:0"
+								},
+								{
+									"anonymous": false,
+									"documentation": {
+										"id": 37,
+										"nodeType": "StructuredDocumentation",
+										"src": "1161:55:0",
+										"text": "@dev Emitted when the platform fee type is updated."
+									},
+									"eventSelector": "d246da9440709ce0dd3f4fd669abc85ada012ab9774b8ecdcc5059ba1486b9c1",
+									"id": 42,
+									"name": "PlatformFeeTypeUpdated",
+									"nameLocation": "1227:22:0",
+									"nodeType": "EventDefinition",
+									"parameters": {
+										"id": 41,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 40,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "feeType",
+												"nameLocation": "1266:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 42,
+												"src": "1250:23:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_enum$_PlatformFeeType_$6",
+													"typeString": "enum IPlatformFee.PlatformFeeType"
+												},
+												"typeName": {
+													"id": 39,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 38,
+														"name": "PlatformFeeType",
+														"nameLocations": [
+															"1250:15:0"
+														],
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 6,
+														"src": "1250:15:0"
+													},
+													"referencedDeclaration": 6,
+													"src": "1250:15:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_enum$_PlatformFeeType_$6",
+														"typeString": "enum IPlatformFee.PlatformFeeType"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1249:25:0"
+									},
+									"src": "1221:54:0"
+								}
+							],
+							"scope": 44,
+							"src": "415:862:0",
+							"usedErrors": [],
+							"usedEvents": [
+								29,
+								36,
+								42
+							]
+						}
+					],
+					"src": "39:1238:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

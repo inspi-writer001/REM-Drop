@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "ContractMetadataUnauthorized",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "prevURI",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newURI",
+						"type": "string"
+					}
+				],
+				"name": "ContractURIUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "contractURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_uri",
+						"type": "string"
+					}
+				],
+				"name": "setContractURI",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"ContractMetadataUnauthorized()": [
+					{
+						"details": "The sender is not authorized to perform the action"
+					}
+				]
+			},
+			"events": {
+				"ContractURIUpdated(string,string)": {
+					"details": "Emitted when the contract URI is updated."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"setContractURI(string)": {
+					"details": "Caller should be authorized to setup contractURI, e.g. contract admin.                  See {_canSetContractURI}.                  Emits {ContractURIUpdated Event}.",
+					"params": {
+						"_uri": "keccak256 hash of the role. e.g. keccak256(\"TRANSFER_ROLE\")"
+					}
+				}
+			},
+			"title": "Contract Metadata",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"contractURI()": {
+					"notice": "Returns the contract metadata URI."
+				},
+				"setContractURI(string)": {
+					"notice": "Lets a contract admin set the URI for contract-level metadata."
+				}
+			},
+			"notice": "Thirdweb's `ContractMetadata` is a contract extension for any base contracts. It lets you set a metadata URI           for you contract.           Additionally, `ContractMetadata` is necessary for NFT contracts that want royalties to get distributed on OpenSea.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/ContractMetadata.sol": "ContractMetadata"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/ContractMetadata.sol": {
+			"keccak256": "0x9e84389dee4054f0dde88c8bc0ae7b3bec0adb1b490e976540a0714e28874308",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://140ea73029faaccbb062ab93b0fcde35b4c6afbd2b6bd72e3e81f761e2d0b8d1",
+				"dweb:/ipfs/QmPVnxe366Jb2g2cKyN1DvjuAm6F9NbUoJCWZdDVV3zN7i"
+			]
+		},
+		"contracts/extension/interface/IContractMetadata.sol": {
+			"keccak256": "0x883b8c431052e826f99025b670fd054931805fbafa23799d0fee33050cbd8456",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://d2a465b77730737338fd015bacfb69063bd2ae2e9be498ec2047a341d412566f",
+				"dweb:/ipfs/QmaY6bHQymwqqfvDJz7AyG5wYkce4Q1yLkLB4CTbQv4Fd4"
+			]
+		}
+	},
+	"version": 1
+}

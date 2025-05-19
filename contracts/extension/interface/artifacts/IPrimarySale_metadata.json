@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "PrimarySaleRecipientUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "primarySaleRecipient",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_saleRecipient",
+						"type": "address"
+					}
+				],
+				"name": "setPrimarySaleRecipient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"PrimarySaleRecipientUpdated(address)": {
+					"details": "Emitted when a new sale recipient is set."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"primarySaleRecipient()": {
+					"details": "The adress that receives all primary sales value."
+				},
+				"setPrimarySaleRecipient(address)": {
+					"details": "Lets a module admin set the default recipient of all primary sales."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Thirdweb's `Primary` is a contract extension to be used with any base contract. It exposes functions for setting and reading  the recipient of primary sales, and lets the inheriting contract perform conditional logic that uses information about  primary sales, if desired.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IPrimarySale.sol": "IPrimarySale"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IPrimarySale.sol": {
+			"keccak256": "0xb4eced38645eb1be936fb30e449da88f31404d8812f639de2f1b58b316b019f0",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://0bb33e58739ecb3ede0482f9c87e1eb624c7b6aa66e0c3fa8c62f541cb6a297c",
+				"dweb:/ipfs/QmVduBJCtEGjB9Wk4ZyyHrx4vF7xEt2RR5YyTrCTrrZVG8"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,128 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "CurrencyTransferLibFailedNativeTransfer",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					}
+				],
+				"name": "CurrencyTransferLibMismatchedValue",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NATIVE_TOKEN",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"NATIVE_TOKEN": {
+					"details": "The address interpreted as native token of the chain."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lib/CurrencyTransferLib.sol": "CurrencyTransferLib"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infra/interface/IWETH.sol": {
+			"keccak256": "0x9e10e91c262cc7009c3679585576c7dc10d63b3a89ea90e0fc3f2dbebd630900",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://264af9c727f917e4adbaef2f2fda86fbf3370f2d3cfc800d433609f2cf2eafb6",
+				"dweb:/ipfs/QmT1dNS9o5crLh6LkYjaaJ914ZUxSiM7QYrzdUYAA5Y21v"
+			]
+		},
+		"contracts/lib/Address.sol": {
+			"keccak256": "0xe0aaf67d84fd9332c9d9f388bce6f0114b86d7d26a46d0310128218612c30ea9",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://807e845ef5b1760eca3af743e06dec9c17c42f720da74749b628dd1cbd038b4e",
+				"dweb:/ipfs/QmUVbegvYKovApUHSJqw2VjFDj4EmowsgZsVnAwoDCEdHX"
+			]
+		},
+		"contracts/lib/CurrencyTransferLib.sol": {
+			"keccak256": "0x1f67f7082f375831ac7febcd640faeece14be1d998f5865649848f8d8fd28c4a",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://5fcf6e04a87448081dc9d35ea1b77a58665c3b9914f61cf9c5635e9d024105f9",
+				"dweb:/ipfs/QmZqKxDkgmQpKAtLxSUnCvDMaSpUokT27gyNd7Mju1uWBP"
+			]
+		},
+		"external-deps/eip/interface/IERC20.sol": {
+			"keccak256": "0xa898a3085e06bd317636cd5d3725ff61593824d6d6f368925c87572d4cfb9d8f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://ccda30b8a2dba15697f3a97018e26d0e98be37a625ee111eea34b0085d2d4d79",
+				"dweb:/ipfs/QmNaUZUH8meghd5R6bcS7U8V9c3UxRko3Q4Vs29C8Yb12B"
+			]
+		},
+		"external-deps/openzeppelin/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0x3559a1442ae395875c5252e10532d5db324753d47bbf5d4e082d33a2e9fcbaa9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://51576575cac75e2bc837c02cc77f5300fd5eb790490fe4bd7356fca23f8898e0",
+				"dweb:/ipfs/QmbLKKEHmAczgZ8hjL6KiBJ9mssNwp3UDeVdWtyxZ7mJuN"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes[]",
+						"name": "data",
+						"type": "bytes[]"
+					}
+				],
+				"name": "multicall",
+				"outputs": [
+					{
+						"internalType": "bytes[]",
+						"name": "results",
+						"type": "bytes[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Provides a function to batch together multiple calls in a single external call. _Available since v4.1._",
+			"kind": "dev",
+			"methods": {
+				"multicall(bytes[])": {
+					"details": "Receives and executes a batch of function calls on this contract."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/extension/interface/IMultiCall.sol": "IMulticall"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/extension/interface/IMultiCall.sol": {
+			"keccak256": "0xdd19c720555c8271fd164d502d7161e1c6318c01bed53369e6b7200008bae924",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7fe85574ef4ffc87e74c94230617d944cb7698dec3d01590684a0379dfa2016",
+				"dweb:/ipfs/QmVsy27WL569GEAWWae7344PNKv41hWAmrBGQwkRc5R9zx"
+			]
+		}
+	},
+	"version": 1
+}
